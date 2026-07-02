@@ -1,0 +1,49 @@
+---
+// Premium Contact Section with Calendly Integration
+---
+<section id="contact" class="py-24 bg-light/50 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            
+            <div class="max-w-xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6 tracking-tight">
+                    Let’s build something <br class="hidden md:block"/> extraordinary together.
+                </h2>
+                <p class="text-lg text-gray-600 mb-10 leading-relaxed">
+                    Whether you have a fully-formed idea or just the start of a concept, I’m here to help you engineer it into reality.
+                </p>
+
+                <div class="p-8 rounded-3xl bg-white border border-gray-100 shadow-sm mb-8">
+                    <h3 class="text-lg font-bold text-dark mb-2">Want to talk strategy immediately?</h3>
+                    <p class="text-sm text-gray-500 mb-6">Skip the form and book a direct 15-minute consultation on my calendar. It’s completely free.</p>
+                    
+                    <a href="https://calendly.com/your-username" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-md shadow-blue-500/10">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        Book a Slot on My Calendar
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm w-full">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-semibold text-dark mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-sm" placeholder="John Doe"/>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-dark mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-sm" placeholder="john@example.com"/>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-dark mb-2">Tell me about your project</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-sm resize-none" placeholder="What are we building?"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-dark text-white font-bold rounded-xl hover:bg-primary hover:shadow-[0_4px_20px_rgba(15,98,254,0.3)] transition-all duration-300 text-sm">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>

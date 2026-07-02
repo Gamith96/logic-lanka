@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  /* අපේ Enterprise Trust Blue සහ අනිත් වර්ණ */
+  --color-primary: #0F62FE;
+  --color-dark: #111111;
+  --color-light: #F9FAFB;
+  
+  /* Premium Typography */
+  --font-sans: "Inter", sans-serif;
+}
