@@ -1,0 +1,301 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import { Image } from "astro:assets";
+
+// උඹේ දැනට තියෙන පින්තූර ටික import කරගන්නවා
+import aosiFlyer from "../assets/projects/aosi_flyer_01.jpg";
+import aosiLogo from "../assets/projects/aosi_logo_01.jpg";
+import floraFlyer1 from "../assets/projects/dinujaya_flora_flyer_design_01.jpg";
+import floraFlyer2 from "../assets/projects/dinujaya_flora_flyer_design_02.jpg";
+import floraFlyer3 from "../assets/projects/dinujaya_flora_flyer_design_03.jpg";
+import floraFlyer4 from "../assets/projects/dinujaya_flora_flyer_design_04.jpg";
+---
+
+<Layout
+  title="Portfolio | Logic Lanka"
+  description="Explore my elite digital products, brands, and marketing campaigns."
+>
+  <Header />
+
+  <main class="pt-36 pb-24 bg-white min-h-screen">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <h1
+          class="text-4xl md:text-5xl font-black text-dark mb-4 tracking-tight"
+        >
+          Selected Archive<span class="text-primary">.</span>
+        </h1>
+        <p class="text-lg text-gray-500">
+          A structured showcase of software engineering, technical SEO,
+          short-form media, and premium visual identities.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-3 mb-16 border-b border-gray-100 pb-6">
+        <button
+          data-filter="all"
+          class="filter-btn px-6 py-2.5 text-sm font-bold rounded-xl bg-dark text-white transition-all duration-300"
+          >All Work</button
+        >
+        <button
+          data-filter="web"
+          class="filter-btn px-6 py-2.5 text-sm font-semibold rounded-xl bg-gray-50 text-gray-600 hover:bg-gray-100 transition-all duration-300"
+          >Web Development</button
+        >
+        <button
+          data-filter="logo"
+          class="filter-btn px-6 py-2.5 text-sm font-semibold rounded-xl bg-gray-50 text-gray-600 hover:bg-gray-100 transition-all duration-300"
+          >Logos</button
+        >
+        <button
+          data-filter="poster"
+          class="filter-btn px-6 py-2.5 text-sm font-semibold rounded-xl bg-gray-50 text-gray-600 hover:bg-gray-100 transition-all duration-300"
+          >Posters & Flyers</button
+        >
+        <button
+          data-filter="reels"
+          class="filter-btn px-6 py-2.5 text-sm font-semibold rounded-xl bg-gray-50 text-gray-600 hover:bg-gray-100 transition-all duration-300"
+          >Reels & Videos</button
+        >
+      </div>
+
+      <div
+        id="portfolio-grid"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500"
+      >
+        <div
+          class="portfolio-item group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm"
+          data-category="web"
+        >
+          <div
+            class="aspect-[4/3] bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-6"
+          >
+            <div class="text-center">
+              <span
+                class="text-xs font-bold text-primary bg-white px-3 py-1 rounded-full shadow-sm"
+                >Laravel & Next.js</span
+              >
+              <h4 class="mt-3 font-bold text-dark">Global Aquatics Platform</h4>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-dark">
+              Athletic Data Architecture
+            </h3>
+            <p class="text-gray-500 text-xs mt-1">
+              High-performance system handling FINA data scales.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="portfolio-item group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm"
+          data-category="poster"
+        >
+          <a
+            data-fslightbox="gallery"
+            href={aosiFlyer.src}
+            class="block aspect-[4/3] bg-gray-50 p-4 cursor-zoom-in overflow-hidden"
+          >
+            <Image
+              src={aosiFlyer}
+              alt="Aosi Flyer Design"
+              class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-103"
+            />
+          </a>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-dark">Aosi Brand Campaign</h3>
+            <p class="text-gray-500 text-xs mt-1">
+              Premium marketing flyer structure.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="portfolio-item group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm"
+          data-category="logo"
+        >
+          <a
+            data-fslightbox="gallery"
+            href={aosiLogo.src}
+            class="block aspect-[4/3] bg-gray-50 p-6 cursor-zoom-in overflow-hidden"
+          >
+            <Image
+              src={aosiLogo}
+              alt="Aosi Logo"
+              class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-103"
+            />
+          </a>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-dark">Aosi Core Identity</h3>
+            <p class="text-gray-500 text-xs mt-1">
+              Minimalist corporate logo conceptualization.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="portfolio-item group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm"
+          data-category="poster"
+        >
+          <a
+            data-fslightbox="gallery"
+            href={floraFlyer1.src}
+            class="block aspect-[4/3] bg-gray-50 p-4 cursor-zoom-in overflow-hidden"
+          >
+            <Image
+              src={floraFlyer1}
+              alt="Dinujaya Flora Branding"
+              class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-103"
+            />
+          </a>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-dark">Dinujaya Flora Branding</h3>
+            <p class="text-gray-500 text-xs mt-1">
+              Elegant layout designed for high-end wedding decors.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="portfolio-item group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm"
+          data-category="poster"
+        >
+          <a
+            data-fslightbox="gallery"
+            href={floraFlyer2.src}
+            class="block aspect-[4/3] bg-gray-50 p-4 cursor-zoom-in overflow-hidden"
+          >
+            <Image
+              src={floraFlyer2}
+              alt="Dinujaya Flora Campaign"
+              class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-103"
+            />
+          </a>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-dark">Dinujaya Promo Assets</h3>
+            <p class="text-gray-500 text-xs mt-1">
+              Social media high-retention marketing creatives.
+            </p>
+          </div>
+        </div>
+        <div
+          class="portfolio-item group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm"
+          data-category="poster"
+        >
+          <a
+            data-fslightbox="gallery"
+            href={floraFlyer3.src}
+            class="block aspect-[4/3] bg-gray-50 p-4 cursor-zoom-in overflow-hidden"
+          >
+            <Image
+              src={floraFlyer3}
+              alt="Dinujaya Flora New Design"
+              class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-103"
+            />
+          </a>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-dark">Dinujaya Wedding Decor</h3>
+            <p class="text-gray-500 text-xs mt-1">
+              Premium floral arrangement layout.
+            </p>
+          </div>
+        </div>
+        <div
+          class="portfolio-item group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm"
+          data-category="poster"
+        >
+          <a
+            data-fslightbox="gallery"
+            href={floraFlyer4.src}
+            class="block aspect-[4/3] bg-gray-50 p-4 cursor-zoom-in overflow-hidden"
+          >
+            <Image
+              src={floraFlyer4}
+              alt="Dinujaya Flora New Design"
+              class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-103"
+            />
+          </a>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-dark">Dinujaya Wedding Decor</h3>
+            <p class="text-gray-500 text-xs mt-1">
+              Premium floral arrangement layout.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="portfolio-item group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm"
+          data-category="reels"
+        >
+          <div
+            class="aspect-[4/3] bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center p-6"
+          >
+            <div
+              class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-purple-600 shadow-md"
+            >
+              <svg class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24"
+                ><path d="M8 5v14l11-7z"></path></svg
+              >
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-dark">
+              High-Retention Creative Reel
+            </h3>
+            <p class="text-gray-500 text-xs mt-1">
+              Scientifically paced brand storytelling asset.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/fslightbox@3.4.1/index.min.js"></script>
+
+<script>
+  const buttons = document.querySelectorAll(".filter-btn");
+  const items = document.querySelectorAll(".portfolio-item");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Active Button Class මාරු කිරීම
+      buttons.forEach((btn) => {
+        btn.classList.remove("bg-dark", "text-white");
+        btn.classList.add("bg-gray-50", "text-gray-600");
+      });
+      button.classList.remove("bg-gray-50", "text-gray-600");
+      button.classList.add("bg-dark", "text-white");
+
+      const filterValue = button.getAttribute("data-filter");
+
+      // Smooth Filtering Logic
+      items.forEach((item) => {
+        const category = item.getAttribute("data-category");
+        if (filterValue === "all" || category === filterValue) {
+          item.style.display = "block";
+          setTimeout(() => {
+            item.style.opacity = "1";
+            item.style.transform = "scale(1)";
+          }, 10);
+        } else {
+          item.style.opacity = "0";
+          item.style.transform = "scale(0.95)";
+          setTimeout(() => {
+            item.style.display = "none";
+          }, 300);
+        }
+      });
+
+      // Lightbox එක refresh කරනවා හංගපු පින්තූර ස්ලයිඩර් එකෙන් අයින් වෙන්න
+      if (window.refreshFsLightbox) {
+        window.refreshFsLightbox();
+      }
+    });
+  });
+</script>

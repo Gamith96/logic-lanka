@@ -1,11 +1,11 @@
 ---
-// Premium Minimalist Header (Bug Fixed & Scroll-Aware)
+// Premium Minimalist Header (Environment-Aware)
 ---
 <div class="fixed top-6 left-0 w-full z-50 flex justify-center pointer-events-none px-6">
-    
     <nav id="smart-header" class="pointer-events-auto w-full max-w-4xl transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] translate-y-0">
         <div class="bg-white/80 backdrop-blur-md border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-2xl px-6 py-4 flex items-center justify-between">
-            <a href="/" class="text-xl font-extrabold tracking-tighter text-dark hover:text-primary transition-colors">
+            
+            <a href={import.meta.env.BASE_URL} class="text-xl font-extrabold tracking-tighter text-dark hover:text-primary transition-colors">
                 LOGIC<span class="text-primary">.</span>LANKA
             </a>
             
@@ -23,25 +23,18 @@
 </div>
 
 <script>
-    // Smart Header Logic (The clean way)
     let lastScrollY = window.scrollY;
     const header = document.getElementById('smart-header');
 
     window.addEventListener('scroll', () => {
         if (!header) return;
-        
         const currentScrollY = window.scrollY;
         
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
-            // පල්ලෙහාට යද්දී: Header එක උඩට ගිහින් හැංගෙනවා (-translate-y-32)
-            header.classList.remove('translate-y-0');
-            header.classList.add('-translate-y-32');
+            header.style.transform = 'translateY(-120px)';
         } else {
-            // උඩට එද්දී: Header එක ආපහු සාමාන්‍ය තැනට එනවා (translate-y-0)
-            header.classList.remove('-translate-y-32');
-            header.classList.add('translate-y-0');
+            header.style.transform = 'translateY(0)';
         }
-        
         lastScrollY = currentScrollY;
     }, { passive: true });
 </script>
